@@ -210,6 +210,7 @@ button {
   }
 
   #memo__list {
+    list-style: none;
     color: #1e366a;
     border: dotted #1e366a 1px;/*ドット 色 太さ*/
     padding: 0.5em 0.5em 0.5em 2em;

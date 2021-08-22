@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感情日記</title>
+    <link rel="stylesheet" href="localstorage.css">
+</head>
+
+<body>
+
+<header>
+    <h1>感情日記</h1>
+</header>
+
+<!-- 日々登録パート -->
+<div class="wrapper__first">
+<h2>‹INPUT›</h2>
+<p>今の感情を選んでみよう</p>
+<ul class="icon">
+    <li class="icon__list">
+        <img src="img/anger.png" alt="" id="anger">
+        <p>怒り</p>
+    </li>   
+    <li class="icon__list">
+        <img src="img/sad.png" alt="" id="sad">
+        <p>悲しい</p>
+    </li>
+    <li class="icon__list">
+        <img src="img/hard.png" alt="" id="hard">
+        <p>辛い</p>
+    </li>
+    <li class="icon__list">
+        <img src="img/happy.png" alt="" id="happy">
+        <p>嬉しい</p>
+    </li>
+    <li class="icon__list">
+        <img src="img/fun.png" alt="" id="fun">
+        <p>楽しい</p>
+    </li>
+</ul>
+</div>
+
+<!-- テキスト入力 -->
+<div class="wrapper__second">
+<div class="select__wrapper__1 select__wrapper__2">
+    <select name ="memo__key" id="memo__key">
+        <option value=""></option>  
+    　  <option value="anger">怒り</option>  
+        <option value="sad">悲しい</option>
+        <option value="hard">辛い</option>
+        <option value="happy">嬉しい</option>
+        <option value="fun">楽しい</option>
+    </select>
+</div>
+<textarea id="memo__text" placeholder="書き起こしたい感情" ></textarea>
+
+<div class="btn__wrapper">
+    <button id="memo__btn">保存</button>
+</div>
+</div>
+
+<!-- 結果確認パート -->
+<div class="wrapper__second">
+    <h2>‹OUTPUT›</h2>
+<div class="select__wrapper__1 select__wrapper__2">
+    <select name ="type" id="type">
+    　  <option value="">期間を選んでください</option>  
+        <option value="month">1ヶ月</option>
+        <option value="week">1週間</option>
+        <option value="yesterday">昨日</option>
+    </select>
+</div>
+
+<div class="btn__wrapper">
+    <button id="btn">結果を表示</button>
+</div>
+</div>
+
+ <!-- 結果グラフ作成 -->
+ <div class="wrapper__third">
+    <canvas id="myPieChart"></canvas>
+    <div class="memo__space">
+        <h3 id="memo__title">«過去コメント一覧»</h3>
+        <ul id="memo__list">
+            <!-- ここに追加データが挿入される -->
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="localstorage.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+</html>
